@@ -14,14 +14,13 @@ public class Client {
         OrderService orderService = new OrderService();
 
         User user = new User();
-        user.setUserName("Anton");
-        user.setUserSurname("Briskly");
-        user.setUserAge(27);
+        user.setUserName("Artur");
+        user.setUserSurname("Max");
+        user.setUserAge(23);
         user.setUserSex("male");
-        user.setUserPhoneNumber("078942525235");
-        user.setUserEmail("anton@phww.com");
+        user.setUserPhoneNumber("5236236");
+        user.setUserEmail("den@phww.com");
         user.setRegistrationDate(new Timestamp(date.getTime()));
-
 
         Bankcard bankcard = new Bankcard();
         bankcard.setUserID(17);
@@ -30,7 +29,15 @@ public class Client {
         bankcard.setBankcardOwnerSurname("Briskly");
         bankcard.setBalance(13000F);
 
-        System.out.println(userService.getUserByID(4));
+        PreparedStatement preparedStatement = null;
+        Connection connection = null;
+
+/*        System.out.println(userService.getUserByID(22));
+        userService.updateUser(user);*/
+
+        User userService1 = userService.getUserByID(22);
+        userService1.setUserAge(30);
+        userService.updateUser(userService1);
 
     }
 }

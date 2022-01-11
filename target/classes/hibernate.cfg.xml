@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/shop</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">xw3!m%f7</property>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="show_sql">true</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <mapping resource="entities/User.hbm.xml"/>
+        <mapping resource="entities/Shoppingcart.hbm.xml"/>
+        <mapping resource="entities/Product.hbm.xml"/>
+        <mapping resource="entities/Order.hbm.xml"/>
+        <mapping resource="entities/Bankcard.hbm.xml"/>
+
+
+        <mapping class="entities.BankcardEntity"/>
+        <mapping class="entities.OrderoEntity"/>
+        <mapping class="entities.ProductEntity"/>
+        <mapping class="entities.ShoppingcartEntity"/>
+        <mapping class="entities.UserEntity"/>
+    </session-factory>
+</hibernate-configuration>

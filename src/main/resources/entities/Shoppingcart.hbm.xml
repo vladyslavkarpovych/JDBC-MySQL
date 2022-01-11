@@ -1,0 +1,12 @@
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/hibernate-mapping">
+    <class name="entities.ShoppingcartEntity" table="shoppingcart">
+        <id name="cartId" column="cart_id">
+            <generator class="identity" />
+        </id>
+        <property name="userId" column="user_id"/>
+        <property name="itemName" column="item_name" />
+        <property name="itemQuantity" column="item_quantity" />
+        <property name="totalPrice" column="total_price" />
+        <property name="createdAt" column="created_at" />
+    </class>
+</hibernate-mapping>

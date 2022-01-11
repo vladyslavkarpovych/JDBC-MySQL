@@ -1,0 +1,12 @@
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/hibernate-mapping">
+    <class name="entities.BankcardEntity" table="bankcard">
+        <id name="bankcardId" column="bankcard_id">
+            <generator class="identity"/>
+        </id>
+        <property name="userId" column="user_id"/>
+        <property name="bankcardNumber" column="bankcard_number"/>
+        <property name="bankcardOwnerName" column="bankcard_owner_name"/>
+        <property name="bankcardOwnerSurname" column="bankcard_owner_surname"/>
+        <property name="balance" column="balance"/>
+    </class>
+</hibernate-mapping>

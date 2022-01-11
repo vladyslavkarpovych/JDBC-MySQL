@@ -1,0 +1,18 @@
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/hibernate-mapping">
+    <class name="entities.OrderoEntity" table="ordero">
+        <id name="orderId" column="order_id">
+            <generator class="identity" />
+        </id>
+        <property name="orderStatus" column="order_status" />
+        <property name="orderSubtotal" column="order_subtotal" />
+        <property name="orderTax" column="order_tax" />
+        <property name="orderDiscount" column="order_discount" />
+        <property name="orderShipping" column="order_shipping" />
+        <property name="orderTotal" column="order_total" />
+        <property name="userName" column="user_name" />
+        <property name="userSurname" column="user_surname" />
+        <property name="userPhoneNumber" column="user_phone_number" />
+        <property name="userAddress" column="user_address" />
+        <property name="userEmail" column="user_email" />
+    </class>
+</hibernate-mapping>

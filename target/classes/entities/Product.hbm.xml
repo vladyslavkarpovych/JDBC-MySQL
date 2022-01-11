@@ -1,0 +1,11 @@
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/hibernate-mapping">
+    <class name="entities.ProductEntity" table="product">
+        <id name="productId" column="product_id">
+            <generator class="identity"/>
+        </id>
+        <property name="productName" column="product_name"/>
+        <property name="productCategory" column="product_category"/>
+        <property name="productPrice" column="product_price"/>
+        <property name="productCreatedAt" column="product_created_at"/>
+    </class>
+</hibernate-mapping>

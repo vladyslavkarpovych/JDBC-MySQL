@@ -90,8 +90,6 @@ public class UserService extends Util implements UserDAO {
             preparedStatement.executeQuery();
         } catch (SQLException sqlException) {
             sqlException.printStackTrace();
-        } finally {
-            CloseUtils.closeResources(preparedStatement, connection);
         }
         return user;
     }
