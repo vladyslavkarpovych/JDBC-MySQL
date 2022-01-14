@@ -22,7 +22,7 @@ public class OrderServiceHibernate {
         sessionFactory = new Configuration().configure().buildSessionFactory();
     }
 
-    public void addOrder(int orderId, int userId, int productId, String orderStatus, float orderSubtotal, float orderTax, float orderDiscount,
+    public void addOrder(int userId, int productId, String orderStatus, float orderSubtotal, float orderTax, float orderDiscount,
                          float orderShipping, float orderTotal, String userName, String userSurname, String userPhoneNumber, String userAddress,
                          String userEmail) {
         Session session = sessionFactory.openSession();
@@ -86,7 +86,7 @@ public class OrderServiceHibernate {
         session.close();
     }
 
-    public void removeShoppingCart(int orderId) {
+    public void removeOrder(int orderId) {
         Session session = sessionFactory.openSession();
         Transaction transaction = null;
 

@@ -11,11 +11,11 @@ public class ShoppingcartEntity {
     private int userId;
     private String itemName;
     private Integer itemQuantity;
-    private Float itemPrice;
-    private Float totalPrice;
+    private double itemPrice;
+    private double totalPrice;
     private Timestamp createdAt;
 
-    public ShoppingcartEntity(int userId, String itemName, Integer itemQuantity, Float itemPrice, Float totalPrice, Timestamp createdAt) {
+    public ShoppingcartEntity(int userId, String itemName, Integer itemQuantity, double itemPrice, double totalPrice, Timestamp createdAt) {
         this.userId = userId;
         this.itemName = itemName;
         this.itemQuantity = itemQuantity;
@@ -42,11 +42,11 @@ public class ShoppingcartEntity {
     }
 
     @Column(name = "item_price")
-    public Float getItemPrice() {
+    public double getItemPrice() {
         return itemPrice;
     }
 
-    public void setItemPrice(Float itemPrice) {
+    public void setItemPrice(double itemPrice) {
         this.itemPrice = itemPrice;
     }
 
@@ -76,11 +76,11 @@ public class ShoppingcartEntity {
 
     @Basic
     @Column(name = "total_price")
-    public Float getTotalPrice() {
+    public double getTotalPrice() {
         return totalPrice;
     }
 
-    public void setTotalPrice(Float totalPrice) {
+    public void setTotalPrice(double totalPrice) {
         this.totalPrice = totalPrice;
     }
 

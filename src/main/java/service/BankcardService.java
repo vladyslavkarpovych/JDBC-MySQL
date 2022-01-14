@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BankcardService extends Util implements BankcardDAO {
-    private Connection connection = getConnection();
+    private static Connection connection = getConnection();
 
     @Override
     public void addBankcard(Bankcard bankcard) {

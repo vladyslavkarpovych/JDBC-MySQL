@@ -6,6 +6,7 @@
         <property name="userId" column="user_id"/>
         <property name="itemName" column="item_name" />
         <property name="itemQuantity" column="item_quantity" />
+        <property name="itemPrice" column="item_price" />
         <property name="totalPrice" column="total_price" />
         <property name="createdAt" column="created_at" />
     </class>

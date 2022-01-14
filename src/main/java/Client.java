@@ -5,14 +5,13 @@ import java.util.Date;
 import java.sql.*;
 
 public class Client {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         Date date = new Date();
         UserService userService = new UserService();
         BankcardService bankcardService = new BankcardService();
         ProductService productService = new ProductService();
         ShoppingCartService shoppingCartService = new ShoppingCartService();
         OrderService orderService = new OrderService();
-
         User user = new User();
         user.setUserName("Artur");
         user.setUserSurname("Max");
@@ -35,9 +34,10 @@ public class Client {
 /*        System.out.println(userService.getUserByID(22));
         userService.updateUser(user);*/
 
-        User userService1 = userService.getUserByID(22);
-        userService1.setUserAge(30);
-        userService.updateUser(userService1);
-
+        Bankcard bankcard1 = bankcardService.getBankcardByUserID(17);
+        System.out.println(bankcard1);
+        bankcard1.setBalance(5F);
+        bankcardService.updateBankcard(bankcard1);
+        bankcardService.removeBankcard(bankcard);
     }
 }

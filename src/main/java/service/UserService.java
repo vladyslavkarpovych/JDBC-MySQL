@@ -70,7 +70,7 @@ public class UserService extends Util implements UserDAO {
 
     @Override
     public User getUserByID(Integer userId) {
-        PreparedStatement preparedStatement = null;
+        PreparedStatement preparedStatement;
         String sql = "SELECT * FROM user WHERE user_id = ?";
         User user = new User();
         try {
